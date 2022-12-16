@@ -1,8 +1,12 @@
 module.exports = {
-  onPreBuild: () => {
+  onPreBuild: ({ utils }) => {
     console.log('About to throw a random error - wooo');
-    throw new Error(
-      'Command failed with exit code: something went terribly wrong!!!'
-    );
+    try {
+      throw new Error(
+        'Command failed with exit code: something went terribly wrong!!!'
+      );
+    } catch (error) {
+      utils.build.failPlugin('MY ERROR MESSAGE', { error });
+    }
   },
 };
