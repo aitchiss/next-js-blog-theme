@@ -13,3 +13,9 @@
 
   [plugins.inputs]
     enable = false
+
+[[plugins]]
+  package = "/plugins/throw-an-error"
+
+[[plugins]]
+  package = "/plugins/do-something-on-error"
