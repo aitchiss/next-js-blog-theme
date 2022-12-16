@@ -1,3 +1,5 @@
-export const onError = function () {
-  console.log('Hello world from onError event!');
+module.exports = {
+  onError: () => {
+    console.log('Hello world from onError event!');
+  },
 };
